@@ -40,4 +40,17 @@ public class CustomListTest {
         assertEquals(hasCityAfterAdd, list.hasCity(cityToAdd), "hasCity return false when city in the list");
     }
 
+    @Test
+    public void deleteCityTest(){
+        CustomList list = MockCityList();
+        City cityToDelete = new City("Nanton", "AB");
+        list.addCity(cityToDelete);
+        Boolean hasCityBeforeDelete = true;
+        assertEquals(hasCityBeforeDelete, list.hasCity(cityToDelete), "City should be in the list");
+
+        list.deleteCity(cityToDelete);
+        Boolean hasCityAfterDelete = false;
+        assertEquals(hasCityAfterDelete, list.hasCity(cityToDelete), "City not deleted");
+    }
+
 }
