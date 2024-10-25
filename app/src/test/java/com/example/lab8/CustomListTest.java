@@ -38,7 +38,6 @@ public class CustomListTest {
 
         Boolean hasCityAfterAdd = true;
         assertEquals(hasCityAfterAdd, list.hasCity(cityToAdd), "hasCity return false when city in the list");
-
     }
 
 }
