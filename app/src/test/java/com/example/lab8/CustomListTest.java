@@ -28,4 +28,17 @@ public class CustomListTest {
         assertEquals(expectedCountAfterAdd, list.getCount(), "City not added to list");
     }
 
+    @Test
+    public void hasCityTest(){
+        CustomList list = MockCityList();
+        City cityToAdd = new City("Nanton", "AB");
+        Boolean hasCityBeforeAdd = false;
+        assertEquals(hasCityBeforeAdd, list.hasCity(cityToAdd), "hasCity return true when city not in the list");
+        list.addCity(cityToAdd);
+
+        Boolean hasCityAfterAdd = true;
+        assertEquals(hasCityAfterAdd, list.hasCity(cityToAdd), "hasCity return false when city in the list");
+
+    }
+
 }
